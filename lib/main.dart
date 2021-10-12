@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(const MyApp());
+import 'home_page.dart';
+
+void main() {
+  runApp(MyApp());
 }
 
+// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
-    return MaterialApp(
-      home: const Center(
-        child: Text('Welcome to 30 days of flutter'),   
+    return const Center(
+      child: MaterialApp(
+        home: HomePage()
       ),
     );
   }
