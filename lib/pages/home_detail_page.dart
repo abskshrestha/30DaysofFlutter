@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalouge/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -16,7 +17,8 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Vx.white,
+        backgroundColor: Colors.transparent
+        
       ),
       bottomNavigationBar: ButtonBar(
         alignment: MainAxisAlignment.spaceBetween,
@@ -27,7 +29,7 @@ class HomeDetailPage extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
                     shape: MaterialStateProperty.all(StadiumBorder(),),
                     ),
-                     child: "Buy".text.make()).wh(100, 50)
+                     child: "Add to cart".text.make()).wh(120, 50)
                   ],
         
       ).p32(),
@@ -51,12 +53,19 @@ class HomeDetailPage extends StatelessWidget {
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
+                    catalog.name.text.xl4.color(MyTheme.darkBluishColor)
+                    .bold
+                    .make(),
                     catalog.desc.text.xl.make(),
-                10.heightBox,
+                10.heightBox,"Dolor non pariatur adipisicing dolor labore aute fugiat. Dolor non pariatur adipisicing dolor labore aute fugiat.Dolor non pariatur adipisicing dolor labore aute fugiat.Dolor non pariatur "
+                .text
+                .sm
+                .make()
+                .p16()
+                
                   ],
-                ).py64(),
-                          ),
+                ).py64() 
+                ),
               ),
             )
             ],
